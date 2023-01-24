@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body class="main__body">
+    <div class="loader">
+        <div class="loader__title">furni<span>.</span></div>
+        <div class="loader__item loader__item-1"></div>
+        <div class="loader__item loader__item-2"></div>
+        <div class="loader__item loader__item-3"></div>
+    </div>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo"> <a href="#">
+                            <svg width="81" height="26" viewBox="0 0 81 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.556818 25V1.72727H14.9886V4.75H4.06818V11.8409H13.9545V14.8523H4.06818V25H0.556818ZM28.9972 17.7614V7.54545H32.4062V25H29.0653V21.9773H28.8835C28.482 22.9091 27.8381 23.6856 26.9517 24.3068C26.0729 24.9205 24.9782 25.2273 23.6676 25.2273C22.5464 25.2273 21.554 24.9811 20.6903 24.4886C19.8343 23.9886 19.16 23.25 18.6676 22.2727C18.1828 21.2955 17.9403 20.0871 17.9403 18.6477V7.54545H21.3381V18.2386C21.3381 19.428 21.6676 20.375 22.3267 21.0795C22.9858 21.7841 23.8419 22.1364 24.8949 22.1364C25.5313 22.1364 26.1638 21.9773 26.7926 21.6591C27.429 21.3409 27.9555 20.8598 28.3722 20.2159C28.7964 19.572 29.0047 18.7538 28.9972 17.7614ZM36.9716 25V7.54545H40.2557V10.3182H40.4375C40.7557 9.37879 41.3163 8.64015 42.1193 8.10227C42.9299 7.55682 43.8466 7.28409 44.8693 7.28409C45.0814 7.28409 45.3314 7.29167 45.6193 7.30682C45.9148 7.32197 46.1458 7.34091 46.3125 7.36364V10.6136C46.1761 10.5758 45.9337 10.5341 45.5852 10.4886C45.2367 10.4356 44.8883 10.4091 44.5398 10.4091C43.7367 10.4091 43.0208 10.5795 42.392 10.9205C41.7708 11.2538 41.2784 11.7197 40.9148 12.3182C40.5511 12.9091 40.3693 13.5833 40.3693 14.3409V25H36.9716ZM52.6506 14.6364V25H49.2528V7.54545H52.5142V10.3864H52.7301C53.1316 9.46212 53.7604 8.7197 54.6165 8.15909C55.4801 7.59848 56.5672 7.31818 57.8778 7.31818C59.0672 7.31818 60.1089 7.56818 61.0028 8.06818C61.8968 8.56061 62.59 9.29545 63.0824 10.2727C63.5748 11.25 63.821 12.4583 63.821 13.8977V25H60.4233V14.3068C60.4233 13.0417 60.0938 12.053 59.4347 11.3409C58.7756 10.6212 57.8703 10.2614 56.7188 10.2614C55.9309 10.2614 55.2301 10.4318 54.6165 10.7727C54.0104 11.1136 53.5294 11.6136 53.1733 12.2727C52.8248 12.9242 52.6506 13.7121 52.6506 14.6364ZM68.3778 25V7.54545H71.7756V25H68.3778ZM70.0938 4.85227C69.5028 4.85227 68.9953 4.6553 68.571 4.26136C68.1544 3.85985 67.946 3.38257 67.946 2.82954C67.946 2.26894 68.1544 1.79167 68.571 1.39773C68.9953 0.996211 69.5028 0.795454 70.0938 0.795454C70.6847 0.795454 71.1884 0.996211 71.6051 1.39773C72.0294 1.79167 72.2415 2.26894 72.2415 2.82954C72.2415 3.38257 72.0294 3.85985 71.6051 4.26136C71.1884 4.6553 70.6847 4.85227 70.0938 4.85227Z"
+                                    fill="white" />
+                                <path
+                                    d="M78.5852 25.2159C77.964 25.2159 77.4299 24.9962 76.983 24.5568C76.536 24.1098 76.3125 23.572 76.3125 22.9432C76.3125 22.322 76.536 21.7917 76.983 21.3523C77.4299 20.9053 77.964 20.6818 78.5852 20.6818C79.2064 20.6818 79.7405 20.9053 80.1875 21.3523C80.6345 21.7917 80.858 22.322 80.858 22.9432C80.858 23.3598 80.7519 23.7424 80.5398 24.0909C80.3352 24.4318 80.0625 24.7045 79.7216 24.9091C79.3807 25.1136 79.0019 25.2159 78.5852 25.2159Z"
+                                    fill="white" fill-opacity="0.28" />
+                            </svg>
+                        </a> </div>
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Home</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>about us</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Services</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Blog</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Contac us</a></li>
+                        </ul>
+                    </nav>
+                    <button class="burger">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Page -->
+    <main>
+        <!-- Section Hero -->
+        <section class="section__hero">
+            <svg class="hero__svg" width="260" height="176" viewBox="0 0 260 176" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="4" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="4" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="4" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="4" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="4" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="4" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="4" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="4" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="28" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="28" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="28" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="28" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="28" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="28" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="28" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="28" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="52" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="52" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="52" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="52" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="52" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="52" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="52" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="52" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="76" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="76" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="76" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="76" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="76" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="76" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="76" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="76" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="100" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="100" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="100" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="100" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="100" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="100" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="100" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="100" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="124" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="124" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="124" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="124" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="124" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="124" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="124" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="124" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="148" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="148" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="148" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="148" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="148" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="148" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="148" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="148" r="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="4.5" cy="172" rx="4.5" ry="4" fill="#D9D9D9" />
+                <ellipse class="hero__circle" opacity="0.3" cx="40.5" cy="172" rx="4.5" ry="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="76" cy="172" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="112" cy="172" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="148" cy="172" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="184" cy="172" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="220" cy="172" r="4" fill="#D9D9D9" />
+                <circle class="hero__circle" opacity="0.3" cx="256" cy="172" r="4" fill="#D9D9D9" />
+            </svg>
+
+            <div class="container">
+                <div class="hero">
+                    <div class="hero__item left__item">
+                        <h1 class="hero__title"><span class="title__row title__row-1">Modern Interior</span>
+                            <span class="title__row title__row-2">Design Studio</span>
+                        </h1>
+                        <div class="hero__buttons">
+                            <a href="#" class="btn btn__hero hero__btn">Shop Now</a>
+                            <a href="#" class="btn btn__outline hero__btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="hero__item right__item">
+                        <img class="hero__image" src="./img/hero__image.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Materials -->
+        <section class="section__materials">
+            <div class="container">
+                <div class="materials">
+                    <div class="materials__item left__item">
+                        <h2 class="section__title materials__title">Crafted with
+                            excellent
+                            material.</h2>
+                        <p class="section__text materials__text">Donec mattis porta eros, aliquet finibus risus interdum
+                            at. Nulla
+                            vivethe as it was for us to know what was to be done.</p>
+                        <a href="#" class="btn btn__section materials__btn">Explore</a>
+                    </div>
+                    <div class="materials__item right__item">
+
+                        <ul class="products">
+                            <li class="products__item">
+                                <div class="products__img"><img src="./img/product-1.png" alt="img"></div>
+                                <div class="products__info">
+                                    <div class="products__name">Nordic CHAIR</div>
+                                    <div class="products__price">$50.00</div>
+                                </div>
+                            </li>
+
+                            <li class="products__item">
+                                <div class="products__img"><img src="./img/product-2.png" alt="img"></div>
+                                <div class="products__info">
+                                    <div class="products__name">Kruzo Aero Chair</div>
+                                    <div class="products__price">$78.00</div>
+                                </div>
+                            </li>
+
+                            <li class="products__item">
+                                <div class="products__img"><img src="./img/product-3.png" alt="img"></div>
+                                <div class="products__info">
+                                    <div class="products__name">Ergonomic Chair</div>
+                                    <div class="products__price">$43.00</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Choose -->
+        <section class="section__choose">
+            <div class="container">
+                <div class="choose">
+                    <div class="choose__item left__item">
+                        <h2 class="section__title choose__title">Why Choose Us</h2>
+                        <p class="section__text choose__text">Donec mattis porta eros, aliquet finibus risus interdum
+                            at. Nulla
+                            vivethe as it was for us to know what was to be done. the</p>
+
+                        <div class="why">
+                            <div class="why__item">
+                                <div class="why__icon">
+                                    <svg width="46" height="36" viewBox="0 0 46 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="29.5" cy="19.5" r="16.5" fill="#35736E" fill-opacity="0.2" />
+                                        <path
+                                            d="M26.6591 27C28.6046 27 30.1818 25.4228 30.1818 23.4773C30.1818 21.5317 28.6046 19.9545 26.6591 19.9545C24.7135 19.9545 23.1364 21.5317 23.1364 23.4773C23.1364 25.4228 24.7135 27 26.6591 27Z"
+                                            stroke="black" stroke-width="2.81818" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M8.3409 27C10.2865 27 11.8636 25.4228 11.8636 23.4773C11.8636 21.5317 10.2865 19.9545 8.3409 19.9545C6.39535 19.9545 4.81818 21.5317 4.81818 23.4773C4.81818 25.4228 6.39535 27 8.3409 27Z"
+                                            stroke="black" stroke-width="2.81818" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M23.1364 8.68182H28.7727L33 12.9091V19.9546H23.1364V8.68182Z"
+                                            stroke="black" stroke-width="2.81818" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M23.1364 1.63635H2V19.9545H23.1364V1.63635Z" stroke="black"
+                                            stroke-width="2.81818" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="why__title">Fast & Free Shipping </div>
+                                <div class="why__text">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                                    vivethe as it was</div>
+                            </div>
+
+                            <div class="why__item">
+                                <div class="why__icon">
+                                    <svg width="45" height="38" viewBox="0 0 45 38" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28.5" cy="21.5" r="16.5" fill="#35736E" fill-opacity="0.2" />
+                                        <path
+                                            d="M6 2L2 7.33333V26C2 26.7072 2.28095 27.3855 2.78105 27.8856C3.28115 28.3857 3.95942 28.6667 4.66667 28.6667H23.3333C24.0406 28.6667 24.7189 28.3857 25.219 27.8856C25.719 27.3855 26 26.7072 26 26V7.33333L22 2H6Z"
+                                            stroke="black" stroke-width="2.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M19.3333 12.6666C19.3333 14.0811 18.7714 15.4376 17.7712 16.4378C16.771 17.438 15.4145 17.9999 14 17.9999C12.5855 17.9999 11.2289 17.438 10.2288 16.4378C9.22856 15.4376 8.66666 14.0811 8.66666 12.6666"
+                                            stroke="black" stroke-width="2.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M2 7.33325H26" stroke="black" stroke-width="2.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="why__title">Easy to Shop</div>
+                                <div class="why__text">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                                    vivethe as it was</div>
+                            </div>
+
+                            <div class="why__item">
+                                <div class="why__icon">
+                                    <svg width="45" height="33" viewBox="0 0 45 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28.5" cy="16.5" r="16.5" fill="#35736E" fill-opacity="0.2" />
+                                        <path
+                                            d="M14.5 29C21.9558 29 28 22.9558 28 15.5C28 8.04416 21.9558 2 14.5 2C7.04416 2 1 8.04416 1 15.5C1 22.9558 7.04416 29 14.5 29Z"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M14.5 20.9C17.4823 20.9 19.9 18.4823 19.9 15.5C19.9 12.5176 17.4823 10.1 14.5 10.1C11.5176 10.1 9.09998 12.5176 9.09998 15.5C9.09998 18.4823 11.5176 20.9 14.5 20.9Z"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M18.3204 19.3204L24.0444 25.0444" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.95557 25.0444L10.6796 19.3204" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M18.3204 11.6796L24.0444 5.95557" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M18.3204 11.6795L23.0859 6.914" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.95557 5.95557L10.6796 11.6796" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="why__title">24/7 Support</div>
+                                <div class="why__text">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                                    vivethe as it was</div>
+                            </div>
+
+                            <div class="why__item">
+                                <div class="why__icon">
+                                    <svg width="43" height="34" viewBox="0 0 43 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="26.5" cy="17.5" r="16.5" fill="#35736E" fill-opacity="0.2" />
+                                        <path d="M6.11111 30.0001L1 24.8889L6.11111 19.7778" stroke="black"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M24 17.2222V19.7778C24 21.1333 23.4615 22.4334 22.503 23.3919C21.5445 24.3504 20.2444 24.8889 18.8889 24.8889H1"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M18.8889 1.88892L24 7.00003L18.8889 12.1111" stroke="black"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M1 14.6667V12.1111C1 10.7556 1.53849 9.45553 2.49701 8.49701C3.45553 7.53849 4.75556 7 6.11111 7H24"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <div class="why__title">Hassle Free Returns</div>
+                                <div class="why__text">Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
+                                    vivethe as it was</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__item right__item">
+                        <img class="why__image" src="./img/why__image.png" alt="why">
+
+                        <svg class="why__svg" width="262" height="176" viewBox="0 0 262 176" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse opacity="0.3" cx="4.5" cy="4" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="4" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="4" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="4" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="4" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="4" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="4" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="4" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="28" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="28" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="28" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="28" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="28" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="28" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="28" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="28" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="52" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="52" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="52" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="52" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="52" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="52" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="52" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="52" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="76" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="76" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="76" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="76" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="76" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="76" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="76" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="76" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="100" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="100" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="100" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="100" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="100" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="100" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="100" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="100" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="124" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="40.5" cy="124" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="76" cy="124" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="112" cy="124" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="148" cy="124" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="184" cy="124" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="220" cy="124" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="256" cy="124" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="148" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="41.5" cy="148" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="78" cy="148" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="114" cy="148" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="150" cy="148" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="186" cy="148" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="222" cy="148" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="258" cy="148" r="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="4.5" cy="172" rx="4.5" ry="4" fill="#F9BF29" />
+                            <ellipse opacity="0.3" cx="41.5" cy="172" rx="4.5" ry="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="78" cy="172" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="114" cy="172" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="150" cy="172" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="186" cy="172" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="222" cy="172" r="4" fill="#F9BF29" />
+                            <circle opacity="0.3" cx="258" cy="172" r="4" fill="#F9BF29" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Help -->
+        <section class="section__help">
+            <svg class="help__svg" width="262" height="176" viewBox="0 0 262 176" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse opacity="0.3" cx="4.5" cy="4" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="4" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="4" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="4" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="4" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="4" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="4" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="4" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="28" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="28" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="28" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="28" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="28" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="28" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="28" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="28" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="52" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="52" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="52" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="52" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="52" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="52" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="52" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="52" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="76" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="76" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="76" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="76" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="76" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="76" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="76" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="76" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="100" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="100" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="100" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="100" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="100" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="100" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="100" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="100" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="124" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="40.5" cy="124" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="76" cy="124" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="112" cy="124" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="148" cy="124" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="184" cy="124" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="220" cy="124" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="256" cy="124" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="148" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="41.5" cy="148" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="78" cy="148" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="114" cy="148" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="150" cy="148" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="186" cy="148" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="222" cy="148" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="258" cy="148" r="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="4.5" cy="172" rx="4.5" ry="4" fill="#35736E" />
+                <ellipse opacity="0.3" cx="41.5" cy="172" rx="4.5" ry="4" fill="#35736E" />
+                <circle opacity="0.3" cx="78" cy="172" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="114" cy="172" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="150" cy="172" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="186" cy="172" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="222" cy="172" r="4" fill="#35736E" />
+                <circle opacity="0.3" cx="258" cy="172" r="4" fill="#35736E" />
+            </svg>
+
+            <div class="container">
+                <div class="help">
+                    <div class="help__item left__item">
+                        <img class="help__img help__img-1" src="./img/help-1.png" alt="img">
+                        <img class="help__img help__img-2" src="./img/help-2.png" alt="img">
+                        <img class="help__img help__img-3" src="./img/help-3.png" alt="img">
+                    </div>
+                    <div class="help__item right__item">
+                        <h2 class="section__title help__title">We help you make
+                            Modern Interior Design </h2>
+                        <p class="section__text help__text">Donec mattis porta eros, aliquet finibus risus interdum at.
+                            Nulla
+                            vivethe as it was for us to know what was to be done. the this is a long post for the
+                            text.`This small text has to be place here, since this is a place holder. You can also chane
+                            it.</p>
+
+                        <ul class="help__list">
+                            <li>Donec mattis porta eros,let aliquet finibus ri</li>
+                            <li>Donec mattis porta eros,let aliquet finibus ri</li>
+                            <li>Donec mattis porta eros,let aliquet finibus ri</li>
+                            <li>Donec mattis porta eros,let aliquet finibus ri</li>
+                        </ul>
+
+                        <a href="#" class="btn btn__section help__btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Examples -->
+        <section class="section__examples">
+            <div class="container">
+                <div class="examples">
+                    <div class="examples__item">
+                        <div class="examples__img"><img src="./img/example-1.png" alt="img"></div>
+                        <div class="examples__info">
+                            <div class="examples__name">Nordic Chair</div>
+                            <div class="examples__text">Donec mattis porta eros, aliquet finibus risus in. Donecd </div>
+                            <a href="#" class="examples__link">Read more</a>
+                        </div>
+                    </div>
+
+                    <div class="examples__item">
+                        <div class="examples__img"><img src="./img/example-2.png" alt="img"></div>
+                        <div class="examples__info">
+                            <div class="examples__name">Kruzi Aero</div>
+                            <div class="examples__text">Donec mattis porta eros, aliquet finibus risus in. Donecd </div>
+                            <a href="#" class="examples__link">Read more</a>
+                        </div>
+                    </div>
+
+                    <div class="examples__item">
+                        <div class="examples__img"><img src="./img/example-3.png" alt="img"></div>
+                        <div class="examples__info">
+                            <div class="examples__name">Ergonomic Chair</div>
+                            <div class="examples__text">Donec mattis porta eros, aliquet finibus risus in. Donecd </div>
+                            <a href="#" class="examples__link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Testimonials -->
+        <section class="section__testimonials">
+            <div class="container">
+                <h2 class="section__title testimonials__title text__center">Testimonials</h2>
+
+                <div class="slider__wrapper">
+
+
+                    <!-- Slider main container -->
+                    <div class="swiper swiper__testimonials">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide testimonials__slide">
+
+                                <div class="testimonials__text">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                    laoreet
+                                    quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                    amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus
+                                    non
+                                    dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                    accumsan non. Pellentesque ma’’
+                                </div>
+                                <div class="testimonials__avatar"><img src="./img/person.jpg" alt="person"></div>
+                                <div class="testimonials__name">Michelle Anna </div>
+                                <div class="testimonials__position">CEO, Co-Founder, XYZ Inc.</div>
+
+                            </div>
+
+                            <div class="swiper-slide testimonials__slide">
+
+                                <div class="testimonials__text">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                    laoreet
+                                    quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                    amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus
+                                    non
+                                    dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                    accumsan non. Pellentesque ma’’
+                                </div>
+                                <div class="testimonials__avatar"><img src="./img/person.jpg" alt="person"></div>
+                                <div class="testimonials__name">Michelle Anna </div>
+                                <div class="testimonials__position">CEO, Co-Founder, XYZ Inc.</div>
+
+                            </div>
+
+                            <div class="swiper-slide testimonials__slide">
+
+                                <div class="testimonials__text">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                    laoreet
+                                    quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                    amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus
+                                    non
+                                    dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                    accumsan non. Pellentesque ma’’
+                                </div>
+                                <div class="testimonials__avatar"><img src="./img/person.jpg" alt="person"></div>
+                                <div class="testimonials__name">Michelle Anna </div>
+                                <div class="testimonials__position">CEO, Co-Founder, XYZ Inc.</div>
+
+                            </div>
+
+                            <div class="swiper-slide testimonials__slide">
+
+                                <div class="testimonials__text">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                    laoreet
+                                    quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                    amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus
+                                    non
+                                    dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                    accumsan non. Pellentesque ma’’
+                                </div>
+                                <div class="testimonials__avatar"><img src="./img/person.jpg" alt="person"></div>
+                                <div class="testimonials__name">Michelle Anna </div>
+                                <div class="testimonials__position">CEO, Co-Founder, XYZ Inc.</div>
+
+                            </div>
+
+                            <div class="swiper-slide testimonials__slide">
+
+                                <div class="testimonials__text">‘’Donec nibh magna, interdum quis massa sed, rhoncus
+                                    laoreet
+                                    quam. Mauris accumsan felis fermentum euismod egestas. Mauris ante augue, cursus sit
+                                    amet arcu a, maximus suscipit nibh. Integer vel nibh tellus. Pellentesque in risus
+                                    non
+                                    dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio
+                                    accumsan non. Pellentesque ma’’
+                                </div>
+                                <div class="testimonials__avatar"><img src="./img/person.jpg" alt="person"></div>
+                                <div class="testimonials__name">Michelle Anna </div>
+                                <div class="testimonials__position">CEO, Co-Founder, XYZ Inc.</div>
+
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+
+                    </div>
+
+
+                    <!-- If we need navigation buttons -->
+                    <button class="slider__btn prev__btn">
+                        <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="slider__btn-path" d="M9 18.43L1 10.1164L9 1.80273" stroke="black"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+                    <button class="slider__btn next__btn">
+                        <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="slider__btn-path" d="M1 18.43L9 10.1164L1 1.80273" stroke="white"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section Blog -->
+        <section class="section__blog">
+            <div class="container">
+                <div class="blog__header">
+                    <h2 class="section__title section__blog-title">Recent Blog</h2>
+                    <a href="#" class="blog__link">View All Posts</a>
+                </div>
+
+                <div class="blog">
+                    <a href="#" class="blog__item">
+                        <div class="blog__img">
+                            <img src="./img/blog-1.jpg" alt="img">
+                        </div>
+                        <div class="blog__title">First Time Home Owner Ideas
+                        </div>
+                        <div class="blog__info"><span>by</span> Nana Ama <span>on</span> Nov 18th, 2022</div>
+                    </a>
+
+                    <a href="#" class="blog__item">
+                        <div class="blog__img">
+                            <img src="./img/blog-2.jpg" alt="img">
+                        </div>
+                        <div class="blog__title">First Time Home Owner Ideas
+                        </div>
+                        <div class="blog__info"><span>by</span> Nana Ama <span>on</span> Nov 18th, 2022</div>
+                    </a>
+
+                    <a href="#" class="blog__item">
+                        <div class="blog__img">
+                            <img src="./img/blog-3.jpg" alt="img">
+                        </div>
+                        <div class="blog__title">First Time Home Owner Ideas
+                        </div>
+                        <div class="blog__info"><span>by</span> Nana Ama <span>on</span> Nov 18th, 2022</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Subscibe -->
+        <section class="section__subscribe">
+            <div class="container">
+                <div class="subscribe">
+                    <img class="subscribe__image" src="./img/subscribe__image.png" alt="img">
+                    <div class="subscribe__title">
+                        <svg class="subscribe__svg" width="22" height="27" viewBox="0 0 22 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="22" height="25.7575" transform="translate(0 0.444092)" fill="white" />
+                            <path
+                                d="M0 6.8835C0 5.10513 1.23105 3.66382 2.75 3.66382H19.25C20.7668 3.66382 22 5.10513 22 6.8835V19.7622C22 21.5381 20.7668 22.9819 19.25 22.9819H2.75C1.23105 22.9819 0 21.5381 0 19.7622V6.8835ZM2.0625 6.8835V7.9953L9.47461 15.1188C10.3598 15.9741 11.6402 15.9741 12.5254 15.1188L19.9375 7.9953V6.83822C19.9375 6.44079 19.6281 6.0333 19.25 6.0333H2.75C2.37016 6.0333 2.0625 6.44079 2.0625 6.83822V6.8835ZM2.0625 11.1194V19.7622C2.0625 20.2049 2.37016 20.5672 2.75 20.5672H19.25C19.6281 20.5672 19.9375 20.2049 19.9375 19.7622V11.1194L13.8359 16.9853C12.1859 18.5699 9.81406 18.5699 8.12539 16.9853L2.0625 11.1194Z"
+                                fill="#CFCFCF" />
+                        </svg>
+                        <span class="subscribe__span">Subscribe to Newsletter</span>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" class="form__input form__item" placeholder="Enter your name">
+                        <input type="email" class="form__input form__item" placeholder="Enter your e-mail">
+                        <button type="submit" class="form__btn form__item">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_471)">
+                                    <path
+                                        d="M28.213 0.985414C28.7851 1.36365 29.0853 2.01746 28.9777 2.67128L25.3527 25.1494C25.2677 25.6736 24.9335 26.1328 24.4464 26.3922C23.9593 26.6516 23.3759 26.684 22.8605 26.4787L15.7068 23.6419L13.4355 27.6674C13.141 28.1915 12.5123 28.4563 11.9062 28.3104C11.3002 28.1645 10.8753 27.6458 10.8753 27.0514V21.8642C10.8753 21.5778 10.9773 21.2968 11.1642 21.0699L20.5269 9.58223C20.6685 9.19859 20.1587 8.80954 19.7906 9.12834L9.65191 17.8765L7.83941 19.438C7.31832 19.8865 6.57632 20.0108 5.92496 19.7514L1.1105 17.8386C0.476128 17.5847 0.0456594 17.0119 0.00601093 16.3527C-0.0336375 15.6935 0.317534 15.0721 0.917925 14.7425L26.2929 0.909767C26.899 0.580159 27.6466 0.61258 28.2187 0.985414H28.213Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_471">
+                                        <rect width="29" height="27.6654" fill="white"
+                                            transform="translate(0 0.682861)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <span>Submit</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="footer__logo">
+                <svg width="90" height="26" viewBox="0 0 90 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.556818 25V1.72727H14.9886V4.75H4.06818V11.8409H13.9545V14.8523H4.06818V25H0.556818ZM28.9972 17.7614V7.54545H32.4062V25H29.0653V21.9773H28.8835C28.482 22.9091 27.8381 23.6856 26.9517 24.3068C26.0729 24.9205 24.9782 25.2273 23.6676 25.2273C22.5464 25.2273 21.554 24.9811 20.6903 24.4886C19.8343 23.9886 19.16 23.25 18.6676 22.2727C18.1828 21.2955 17.9403 20.0871 17.9403 18.6477V7.54545H21.3381V18.2386C21.3381 19.428 21.6676 20.375 22.3267 21.0795C22.9858 21.7841 23.8419 22.1364 24.8949 22.1364C25.5313 22.1364 26.1638 21.9773 26.7926 21.6591C27.429 21.3409 27.9555 20.8598 28.3722 20.2159C28.7964 19.572 29.0047 18.7538 28.9972 17.7614ZM36.9716 25V7.54545H40.2557V10.3182H40.4375C40.7557 9.37879 41.3163 8.64015 42.1193 8.10227C42.9299 7.55682 43.8466 7.28409 44.8693 7.28409C45.0814 7.28409 45.3314 7.29167 45.6193 7.30682C45.9148 7.32197 46.1458 7.34091 46.3125 7.36364V10.6136C46.1761 10.5758 45.9337 10.5341 45.5852 10.4886C45.2367 10.4356 44.8883 10.4091 44.5398 10.4091C43.7367 10.4091 43.0208 10.5795 42.392 10.9205C41.7708 11.2538 41.2784 11.7197 40.9148 12.3182C40.5511 12.9091 40.3693 13.5833 40.3693 14.3409V25H36.9716ZM52.6506 14.6364V25H49.2528V7.54545H52.5142V10.3864H52.7301C53.1316 9.46212 53.7604 8.7197 54.6165 8.15909C55.4801 7.59848 56.5672 7.31818 57.8778 7.31818C59.0672 7.31818 60.1089 7.56818 61.0028 8.06818C61.8968 8.56061 62.59 9.29545 63.0824 10.2727C63.5748 11.25 63.821 12.4583 63.821 13.8977V25H60.4233V14.3068C60.4233 13.0417 60.0938 12.053 59.4347 11.3409C58.7756 10.6212 57.8703 10.2614 56.7188 10.2614C55.9309 10.2614 55.2301 10.4318 54.6165 10.7727C54.0104 11.1136 53.5294 11.6136 53.1733 12.2727C52.8248 12.9242 52.6506 13.7121 52.6506 14.6364ZM68.3778 25V7.54545H71.7756V25H68.3778ZM70.0938 4.85227C69.5028 4.85227 68.9953 4.6553 68.571 4.26136C68.1544 3.85985 67.946 3.38257 67.946 2.82954C67.946 2.26894 68.1544 1.79167 68.571 1.39773C68.9953 0.996211 69.5028 0.795454 70.0938 0.795454C70.6847 0.795454 71.1884 0.996211 71.6051 1.39773C72.0294 1.79167 72.2415 2.26894 72.2415 2.82954C72.2415 3.38257 72.0294 3.85985 71.6051 4.26136C71.1884 4.6553 70.6847 4.85227 70.0938 4.85227Z"
+                        fill="black" />
+                    <path
+                        d="M78.5852 25.2159C77.964 25.2159 77.4299 24.9962 76.983 24.5568C76.536 24.1098 76.3125 23.572 76.3125 22.9432C76.3125 22.322 76.536 21.7917 76.983 21.3523C77.4299 20.9053 77.964 20.6818 78.5852 20.6818C79.2064 20.6818 79.7405 20.9053 80.1875 21.3523C80.6345 21.7917 80.858 22.322 80.858 22.9432C80.858 23.3598 80.7519 23.7424 80.5398 24.0909C80.3352 24.4318 80.0625 24.7045 79.7216 24.9091C79.3807 25.1136 79.0019 25.2159 78.5852 25.2159Z"
+                        fill="#2F2F2F" />
+                    <path
+                        d="M87.6477 25.2159C87.0265 25.2159 86.4924 24.9962 86.0455 24.5568C85.5985 24.1098 85.375 23.572 85.375 22.9432C85.375 22.322 85.5985 21.7917 86.0455 21.3523C86.4924 20.9053 87.0265 20.6818 87.6477 20.6818C88.2689 20.6818 88.803 20.9053 89.25 21.3523C89.697 21.7917 89.9205 22.322 89.9205 22.9432C89.9205 23.3598 89.8144 23.7424 89.6023 24.0909C89.3977 24.4318 89.125 24.7045 88.7841 24.9091C88.4432 25.1136 88.0644 25.2159 87.6477 25.2159Z"
+                        fill="white" fill-opacity="0.28" />
+                </svg>
+            </a>
+            <div class="footer">
+                <div class="footer__item left__item">
+                    <div class="footer__text">
+                        Donec mattis porta eros, aliquet finibus risus interdum at. Nulla vivethe as it was for us to
+                        know
+                        what was to be done. the this is a long post for the text.`This small text has to be place here,
+                        since this is
+                    </div>
+
+                    <ul class="social">
+                        <li class="social__item"><a href="#">
+                                <svg width="12" height="19" viewBox="0 0 12 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_487)">
+                                        <path
+                                            d="M10.4678 10.6875L11.001 7.24895H7.6669V5.01756C7.6669 4.07684 8.13265 3.15986 9.6259 3.15986H11.1416V0.232305C11.1416 0.232305 9.76615 0 8.45102 0C5.70527 0 3.91052 1.64691 3.91052 4.62828V7.24895H0.858398V10.6875H3.91052V19H7.6669V10.6875H10.4678Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_487">
+                                            <rect width="12" height="19" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a></li>
+                        <li class="social__item"><a href="#">
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_495)">
+                                        <path
+                                            d="M8.00356 4.95708C5.73214 4.95708 3.89999 6.7606 3.89999 8.99653C3.89999 11.2325 5.73214 13.036 8.00356 13.036C10.275 13.036 12.1071 11.2325 12.1071 8.99653C12.1071 6.7606 10.275 4.95708 8.00356 4.95708ZM8.00356 11.6227C6.53571 11.6227 5.33571 10.445 5.33571 8.99653C5.33571 7.5481 6.53214 6.37036 8.00356 6.37036C9.47499 6.37036 10.6714 7.5481 10.6714 8.99653C10.6714 10.445 9.47142 11.6227 8.00356 11.6227ZM13.2321 4.79185C13.2321 5.31567 12.8036 5.73403 12.275 5.73403C11.7429 5.73403 11.3179 5.31216 11.3179 4.79185C11.3179 4.27153 11.7464 3.84966 12.275 3.84966C12.8036 3.84966 13.2321 4.27153 13.2321 4.79185ZM15.95 5.7481C15.8893 4.48599 15.5964 3.36802 14.6571 2.44692C13.7214 1.52583 12.5857 1.23755 11.3036 1.17427C9.98214 1.10044 6.02142 1.10044 4.69999 1.17427C3.42142 1.23403 2.28571 1.52231 1.34642 2.44341C0.407136 3.3645 0.11785 4.48247 0.0535644 5.74458C-0.0214355 7.04536 -0.0214355 10.9442 0.0535644 12.245C0.114279 13.5071 0.407136 14.625 1.34642 15.5461C2.28571 16.4672 3.41785 16.7555 4.69999 16.8188C6.02142 16.8926 9.98214 16.8926 11.3036 16.8188C12.5857 16.759 13.7214 16.4708 14.6571 15.5461C15.5928 14.625 15.8857 13.5071 15.95 12.245C16.025 10.9442 16.025 7.04888 15.95 5.7481ZM14.2428 13.6407C13.9643 14.3297 13.425 14.8606 12.7214 15.1383C11.6679 15.5497 9.16785 15.4547 8.00356 15.4547C6.83928 15.4547 4.33571 15.5461 3.28571 15.1383C2.58571 14.8641 2.04642 14.3333 1.76428 13.6407C1.34642 12.6036 1.44285 10.1426 1.44285 8.99653C1.44285 7.85044 1.34999 5.38599 1.76428 4.35239C2.04285 3.66333 2.58214 3.13247 3.28571 2.85474C4.33928 2.44341 6.83928 2.53833 8.00356 2.53833C9.16785 2.53833 11.6714 2.44692 12.7214 2.85474C13.4214 3.12895 13.9607 3.65981 14.2428 4.35239C14.6607 5.3895 14.5643 7.85044 14.5643 8.99653C14.5643 10.1426 14.6607 12.6071 14.2428 13.6407Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_495">
+                                            <rect width="16" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a></li>
+                        <li class="social__item"><a href="#">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.2525 5.03741C15.2633 5.18842 15.2633 5.33946 15.2633 5.49046C15.2633 10.0964 11.7576 15.4035 5.35025 15.4035C3.37626 15.4035 1.54252 14.8318 0 13.8395C0.280467 13.8718 0.550109 13.8826 0.841367 13.8826C2.47015 13.8826 3.96953 13.3325 5.16687 12.394C3.63514 12.3617 2.35151 11.3585 1.90925 9.97777C2.125 10.0101 2.34072 10.0317 2.56727 10.0317C2.88007 10.0317 3.19291 9.98853 3.48414 9.91306C1.8877 9.58942 0.690326 8.18716 0.690326 6.49363V6.4505C1.15414 6.70938 1.69353 6.87118 2.26518 6.89273C1.32673 6.26709 0.711908 5.19921 0.711908 3.99108C0.711908 3.34388 0.884465 2.75061 1.18651 2.23284C2.90162 4.34705 5.47968 5.72774 8.37051 5.87878C8.31659 5.61989 8.28421 5.35025 8.28421 5.08057C8.28421 3.1605 9.83752 1.59644 11.7683 1.59644C12.7715 1.59644 13.6776 2.01712 14.314 2.69669C15.1014 2.54568 15.8565 2.25442 16.5253 1.85532C16.2664 2.66435 15.7163 3.34392 14.9936 3.77536C15.6948 3.69989 16.3743 3.50568 16.9999 3.23604C16.5254 3.92637 15.9321 4.54119 15.2525 5.03741Z"
+                                        fill="black" />
+                                </svg>
+                            </a></li>
+                        <li class="social__item"><a href="#">
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.13375 14.0002H0.23125V4.6533H3.13375V14.0002ZM1.68094 3.3783C0.752813 3.3783 0 2.60955 0 1.68143C6.64312e-09 1.23561 0.177098 0.80806 0.492335 0.492823C0.807572 0.177587 1.23513 0.000488281 1.68094 0.000488281C2.12675 0.000488281 2.5543 0.177587 2.86954 0.492823C3.18478 0.80806 3.36188 1.23561 3.36188 1.68143C3.36188 2.60955 2.60875 3.3783 1.68094 3.3783ZM13.9969 14.0002H11.1006V9.45018C11.1006 8.3658 11.0787 6.97518 9.59156 6.97518C8.0825 6.97518 7.85125 8.1533 7.85125 9.37205V14.0002H4.95188V4.6533H7.73562V5.9283H7.77625C8.16375 5.19393 9.11031 4.41893 10.5225 4.41893C13.46 4.41893 14 6.3533 14 8.8658V14.0002H13.9969Z"
+                                        fill="black" />
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="footer__item right__item">
+                    <ul class="links">
+                        <li><a class="footer__link footer__text" href="#">About us</a></li>
+                        <li><a class="footer__link footer__text" href="#">Services</a></li>
+                        <li><a class="footer__link footer__text" href="#">Blog</a></li>
+                        <li><a class="footer__link footer__text" href="#">Contact us</a></li>
+                    </ul>
+
+                    <ul class="links">
+                        <li><a class="footer__link footer__text" href="#">Support</a></li>
+                        <li><a class="footer__link footer__text" href="#">Knowledge base</a></li>
+                        <li><a class="footer__link footer__text" href="#">Live chat</a></li>
+                    </ul>
+
+                    <ul class="links">
+                        <li><a class="footer__link footer__text" href="#">Jobs</a></li>
+                        <li><a class="footer__link footer__text" href="#">Our team</a></li>
+                        <li><a class="footer__link footer__text" href="#">Leadership</a></li>
+                        <li><a class="footer__link footer__text" href="#">Privacy Policy</a></li>
+                    </ul>
+
+                    <ul class="links">
+                        <li><a class="footer__link footer__text" href="#">Nordic Chair</a></li>
+                        <li><a class="footer__link footer__text" href="#">Kruzo Aero</a></li>
+                        <li><a class="footer__link footer__text" href="#">Ergonomic</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="copy">
+                <div class="copy__item ">
+                    <div class="footer__text">Copyright 2022 degraft87@gmail.com. <span class="copy__text">All Rights
+                            Reserved.</span></div>
+                </div>
+                <div class="copy__item">
+                    <a href="#" class="copy__link footer__text">Terms & Conditions</a>
+                    <a href="#" class="copy__link footer__text">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="./js/scripts.min.js"></script>
+<script src="./js/animations.js"></script>
+
+</html>
